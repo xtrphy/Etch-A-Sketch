@@ -1,1 +1,1 @@
-# Etch-A-Sketch
+# Etch-A-Sketch project is created for practicing my DOM skills.

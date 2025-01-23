@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+  margin: 2rem auto;
+  display: flex;
+  flex-wrap: wrap;
+  width: 700px;
+  height: 700px;
+  border: 2px solid #000;
+}
+
+.square {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+}
+
+.grid-size {
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+}
+
+.create-grid-btn {
+  text-align: center;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 32px;
+  background-color: #454545;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.create-grid-btn:hover {
+  background-color: #656565;
+}
+
+.clear-grid-btn {
+  text-align: center;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 32px;
+  background-color: #e8e8e8;
+  color: #454545;
+  font-weight: 800;
+  margin-left: 1rem;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.clear-grid-btn:hover {
+  background-color: #cccccc;
+}
