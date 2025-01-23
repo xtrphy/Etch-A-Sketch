@@ -67,3 +67,15 @@
 .clear-grid-btn:hover {
   background-color: #cccccc;
 }
+
+.party-mode-btn {
+  text-align: center;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 32px;
+  background-color: pink;
+  color: #000;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}

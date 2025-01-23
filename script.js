@@ -17,15 +17,36 @@ function createGrid(rowsCols) {
     square.classList.add('square');
     square.style.width = `${squareSize}%`;
     square.style.height = `${squareSize}%`;
+    square.style.backgroundColor = '#fff';
+    square.dataset.darkness = 0;
 
     square.addEventListener('mouseenter', () => {
-      square.style.backgroundColor = '#000';
-
+      let currentDarkness = parseInt(square.dataset.darkness);
+      if (currentDarkness < 10) {
+        currentDarkness += 1;
+        square.dataset.darkness = currentDarkness;
+        const darknessPercentage = currentDarkness * 10;
+        square.style.backgroundColor = `rgb(${255 - darknessPercentage}, ${255 - darknessPercentage}, ${255 - darknessPercentage})`;
+      }
+      // square.style.backgroundColor = getRandomColor();
     });
     containerEl.appendChild(square);
   }
 }
+
 createGrid(rowsCols);
+
+function getRandomColor() {
+  const letters = '0123456789ABCDEF';
+  let color = '#';
+
+  for (let i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+
+  }
+
+  return color;
+}
 
 createGridBtn.addEventListener('click', () => {
   const rowsCols = parseInt(prompt('Enter grid size in pixels'));
@@ -47,5 +68,6 @@ clearGridBtn.addEventListener('click', () => {
   const squares = document.querySelectorAll('.square');
   squares.forEach((square) => {
     square.style.backgroundColor = '#fff';
+    square.dataset.darkness = 0;
   });
 });
